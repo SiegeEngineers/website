@@ -10,13 +10,13 @@ const SEO = props => {
   const { siteTitle, siteUrl, urlShareImage, siteDescription, twitterUsername, authorName } = useSiteMetadata();
 
   const title = props.title ? `${props.title} | ${siteTitle}` : `${siteTitle} - ${siteDescription}`;
-  const formmatedSiteUrl = siteUrl.endsWith('/') ? siteUrl.substring(0, siteUrl.length - 1) : siteUrl;
-  const image = `${formmatedSiteUrl}${imagePath}`;
+  const formattedSiteUrl = siteUrl.endsWith('/') ? siteUrl.substring(0, siteUrl.length - 1) : siteUrl;
   const defaultShareImage = withPrefix(useSiteImages(urlShareImage));
   const imagePath = props.imageShare || props.cover || defaultShareImage;
+  const image = `${formattedSiteUrl}${imagePath}`;
   const description = props.description || siteDescription;
   const internalTranslations = (props.translations || []).filter(t => !t.link.startsWith('http'));
-  const url = formmatedSiteUrl + withPrefix(path);
+  const url = formattedSiteUrl + withPrefix(path);
 
   return (
     <>
@@ -33,7 +33,7 @@ const SEO = props => {
             key={`head-translation-${translation.hreflang}`}
             rel="alternate"
             hreflang={translation.hreflang}
-            href={formmatedSiteUrl + withPrefix(translation.link)}
+            href={formattedSiteUrl + withPrefix(translation.link)}
           />
         ))}
 

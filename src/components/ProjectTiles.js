@@ -133,7 +133,6 @@ const ProjectTiles = props => {
                   <a
                     href="https://ratings.aoe2.se/"
                     target="_blank"
-                    npmrel="noreferrer"
                     className="button is-light is-outlined"
                     rel="noreferrer"
                   >
@@ -237,7 +236,7 @@ const ProjectTiles = props => {
           </div>
         </div>
         <div className="tile is-parent">
-          <article className="tile is-child notification has-background-info-light has-text-black-bis">
+          <article className="tile is-child notification has-background-info-light">
             {/*<div className="is-pulled-right has-text-centered" style={{ width: 150 }}>*/}
             {/*  <figure className="image is-128x128 m-auto">*/}
             {/*    <DonationProgressBar />*/}

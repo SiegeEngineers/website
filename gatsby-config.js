@@ -105,7 +105,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-htaccess`,
       options: {
-        DisallowSymLinks: true,
+        DisallowSymLinks: true
       }
     }
   ]
