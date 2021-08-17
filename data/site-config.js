@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: 'Siege Engineers',
   siteDescription: 'Siege Engineers is a development collective around Age of Empires II esports.',
   siteUrl: 'https://siegeengineers.org/',
-  siteCoverImage: 'cover.png', // file in content/images
+  siteCoverImage: 'cover.jpg', // file in content/images
   defaultLang: 'en',
   authorName: 'Siege Engineers Team',
   authorAvatar: 'avatar.png', // file in content/images
