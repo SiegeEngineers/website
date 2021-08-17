@@ -110,8 +110,8 @@ const DonationOptions = props => {
             <h4>Donation Goal & Progress</h4>
             <p>
               If the cost estimations on our <Link to={'/projects'}>projects page</Link> are accurate and no projects
-              are added or removed, we would need about <strong>€&nbsp;{totalCost - donationReceived}</strong> more to cover
-              our costs for 2022.
+              are added or removed, we would need about <strong>€&nbsp;{totalCost - donationReceived}</strong> more to
+              cover our costs for 2022.
             </p>
             <div className="columns is-mobile">
               <div className="column is-one-third has-text-centered">
