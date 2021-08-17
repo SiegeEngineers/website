@@ -3,18 +3,20 @@ import { Helmet } from 'react-helmet';
 import { withPrefix } from 'gatsby';
 import SchemaOrg from './schema-org';
 import useSiteMetadata from '../../hooks/use-site-config';
+import useSiteImages from '../../hooks/use-site-images';
 
 const SEO = props => {
   const { isBlogPost, path = '', lang = 'en', datePublished } = props;
-  const { siteTitle, siteUrl, siteCoverImage, siteDescription, twitterUsername, authorName } = useSiteMetadata();
+  const { siteTitle, siteUrl, urlShareImage, siteDescription, twitterUsername, authorName } = useSiteMetadata();
 
   const title = props.title ? `${props.title} | ${siteTitle}` : `${siteTitle} - ${siteDescription}`;
-  const formmatedSiteUrl = siteUrl.endsWith('/') ? siteUrl.substring(0, siteUrl.length - 1) : siteUrl;
-  const imagePath = props.imageShare || props.cover || withPrefix(siteCoverImage);
-  const image = `${formmatedSiteUrl}${imagePath}`;
+  const formattedSiteUrl = siteUrl.endsWith('/') ? siteUrl.substring(0, siteUrl.length - 1) : siteUrl;
+  const defaultShareImage = withPrefix(useSiteImages(urlShareImage));
+  const imagePath = props.imageShare || props.cover || defaultShareImage;
+  const image = `${formattedSiteUrl}${imagePath}`;
   const description = props.description || siteDescription;
   const internalTranslations = (props.translations || []).filter(t => !t.link.startsWith('http'));
-  const url = formmatedSiteUrl + withPrefix(path);
+  const url = formattedSiteUrl + withPrefix(path);
 
   return (
     <>
@@ -31,7 +33,7 @@ const SEO = props => {
             key={`head-translation-${translation.hreflang}`}
             rel="alternate"
             hreflang={translation.hreflang}
-            href={formmatedSiteUrl + withPrefix(translation.link)}
+            href={formattedSiteUrl + withPrefix(translation.link)}
           />
         ))}
 

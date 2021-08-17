@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-6">
+      <footer className="footer p-6 has-background-white-ter">
         <div className="content has-text-centered">
           <p>
             <Link className="footer-link" to="/imprint">

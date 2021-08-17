@@ -8,13 +8,13 @@ const useSiteMetadata = () => {
           siteTitle
           siteUrl
           siteCoverImage
+          urlShareImage
           authorName
           authorAvatar
           authorDescription
           siteDescription
           twitterUsername
           defaultLang
-          navBarLogo
           blogPostPathPrefix
         }
       }
