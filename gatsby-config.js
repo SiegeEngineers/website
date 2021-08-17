@@ -101,6 +101,12 @@ module.exports = {
         display: config.display,
         icon: config.icon
       }
+    },
+    {
+      resolve: `gatsby-plugin-htaccess`,
+      options: {
+        DisallowSymLinks: true,
+      }
     }
   ]
 };
