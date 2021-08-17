@@ -6,17 +6,15 @@ import useSiteImages from '../hooks/use-site-images';
 import Link from 'gatsby-link';
 
 const Header = props => {
-  const { siteTitle, navBarLogo } = useSiteMetadata();
+  const { siteTitle } = useSiteMetadata();
 
   const [isMenuOpen, toggleMenuOpenState] = React.useState(false);
-
-  const iconSrc = navBarLogo ? useSiteImages(navBarLogo) : null;
 
   return (
     <header>
       <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <img src={iconSrc} width="56" height="56" alt="Siege Engineers Logo" />
+          <img src={useSiteImages('se-logo.png')} width="56" height="56" alt="Siege Engineers Logo" />
           <Link to={`/`} aria-label={`View home page`}>
             <h1 style={{ display: 'inline-block', fontWeight: 'bold', fontSize: '24px', padding: '10px 10px 0px' }}>
               {siteTitle}

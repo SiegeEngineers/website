@@ -3,6 +3,7 @@ module.exports = {
   siteDescription: 'Siege Engineers is a development collective around Age of Empires II esports.',
   siteUrl: 'https://siegeengineers.org/',
   siteCoverImage: 'cover.jpg', // file in content/images
+  urlShareImage: 'se-banner.png', // file in content/images
   defaultLang: 'en',
   authorName: 'Siege Engineers Team',
   authorAvatar: 'avatar.png', // file in content/images
@@ -14,7 +15,6 @@ module.exports = {
   themeColor: '#ffdc4e',
   display: 'browser',
   icon: 'content/images/se-logo.png',
-  postsPerPage: 5,
   blogPostPathPrefix: 'post', // /post/post-slug
-  navBarLogo: 'se-logo.png' //  (leave empty to disable: '')
+  postsPerPage: 5
 };
