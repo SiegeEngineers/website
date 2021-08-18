@@ -41,7 +41,7 @@ const ProjectTiles = props => {
                   <p className="subtitle">Join the fun, chat with fellow technical Age of Empires II enthusiasts!</p>
                   <p>
                     <a
-                      href="https://github.com/SiegeEngineers"
+                      href="https://discordapp.com/invite/njAsNuD"
                       target="_blank"
                       rel="noreferrer"
                       className="button is-light is-outlined"
