@@ -35,4 +35,7 @@ npm run format
 
 # lint code
 npm run lint
+
+# deploy
+rsync -avh ./public/ aoe2se:~/html/ --delete
 ```
