@@ -58,7 +58,7 @@ export function getDonationStats() {
   }
 
   //TODO: Get total donated amount.
-  const donationReceived = 549.50 - totalCost;
+  const donationReceived = 560.08 - totalCost;
 
   return { totalCost, donationReceived };
 }
