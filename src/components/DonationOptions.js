@@ -136,7 +136,7 @@ const DonationOptions = props => {
             <p className="has-text-grey has-text-right">
               <small>
                 <small>
-                  Last updated on <time datetime="2021-09-10">Sep 10, 2021</time>
+                  Last updated on <time datetime="2021-11-01">Nov 1, 2021</time>
                 </small>
               </small>
             </p>
