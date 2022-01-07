@@ -111,32 +111,32 @@ const DonationOptions = props => {
             <p>
               If the cost estimations on our <Link to={'/projects'}>projects page</Link> are accurate and no projects
               are added or removed, we would need about <strong>€&nbsp;{(totalCost - donationReceived).toFixed(2)}</strong> more to
-              cover our costs for 2022.
+              cover our costs for 2023.
             </p>
             <div className="columns is-mobile">
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
                   <CircleProgressBar percent={100} />
                 </figure>
-                <p className="subtitle mt-2">2021</p>
+                <p className="subtitle mt-2">2022</p>
               </div>
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
                   <CircleProgressBar percent={percent} />
                 </figure>
-                <p className="subtitle mt-2">2022</p>
+                <p className="subtitle mt-2">2023</p>
               </div>
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
                   <CircleProgressBar percent={0} />
                 </figure>
-                <p className="subtitle mt-2">2023</p>
+                <p className="subtitle mt-2">2024</p>
               </div>
             </div>
             <p className="has-text-grey has-text-right">
               <small>
                 <small>
-                  Last updated on <time datetime="2021-11-01">Nov 1, 2021</time>
+                  Last updated on <time datetime="2022-01-07">Jan 7, 2022</time>
                 </small>
               </small>
             </p>
