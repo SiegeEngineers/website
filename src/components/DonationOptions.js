@@ -94,8 +94,10 @@ const DonationOptions = props => {
     />
   ));
 
-  const { totalCost, donationReceived } = getDonationStats();
-  const percent = Math.round((donationReceived / totalCost) * 100);
+  const { annualCost, availableFunds } = getDonationStats();
+  const percent2022 = Math.round((availableFunds[0] / annualCost) * 100);
+  const percent2023 = Math.round((availableFunds[1] / annualCost) * 100);
+  const percent2024 = Math.round((availableFunds[2] / annualCost) * 100);
 
   return (
     <div className="tile is-ancestor">
@@ -110,25 +112,25 @@ const DonationOptions = props => {
             <h4>Donation Goal & Progress</h4>
             <p>
               If the cost estimations on our <Link to={'/projects'}>projects page</Link> are accurate and no projects
-              are added or removed, we would need about <strong>€&nbsp;{(totalCost - donationReceived).toFixed(2)}</strong> more to
-              cover our costs for 2023.
+              are added or removed, we would need about <strong>€&nbsp;{(annualCost - availableFunds[2]).toFixed(2)}</strong> more to
+              cover our costs for 2024.
             </p>
             <div className="columns is-mobile">
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
-                  <CircleProgressBar percent={100} />
+                  <CircleProgressBar percent={percent2022} />
                 </figure>
                 <p className="subtitle mt-2">2022</p>
               </div>
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
-                  <CircleProgressBar percent={percent} />
+                  <CircleProgressBar percent={percent2023} />
                 </figure>
                 <p className="subtitle mt-2">2023</p>
               </div>
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
-                  <CircleProgressBar percent={0} />
+                  <CircleProgressBar percent={percent2024} />
                 </figure>
                 <p className="subtitle mt-2">2024</p>
               </div>
@@ -136,7 +138,7 @@ const DonationOptions = props => {
             <p className="has-text-grey has-text-right">
               <small>
                 <small>
-                  Last updated on <time datetime="2022-03-19">Mar 19, 2022</time>
+                  Last updated on <time datetime="2022-07-03">Jul 03, 2022</time>
                 </small>
               </small>
             </p>

@@ -4,8 +4,8 @@ import 'react-circular-progressbar/dist/styles.css';
 import ProgressProvider from './ProgressProvider';
 
 const DonationProgressBar = props => {
-  const { totalCost, donationReceived } = getDonationStats();
-  const percent = Math.round((donationReceived / totalCost) * 100);
+  const { totalCost, availableFunds } = getDonationStats();
+  const percent = Math.round((availableFunds[2] / totalCost) * 100);
   return <CircleProgressBar percent={percent} text={`${percent}%`} />;
 };
 
@@ -50,17 +50,25 @@ function loadProjectsFromJSON() {
 
 export function getDonationStats() {
   const allProjects = loadProjectsFromJSON();
-  let totalCost = 0;
+  let annualCost = 0;
   for (const project in allProjects) {
     if (allProjects[project]['is_active']) {
-      totalCost += allProjects[project]['costs']['total'];
+      annualCost += allProjects[project]['costs']['total'];
     }
   }
 
   //TODO: Get total donated amount.
-  const donationReceived = 530.96 - totalCost;
+  const initialMoney2022 = 521.75;
+  const moneyReceivedSince = 170.85;
+  const availableFunds = [];
+  let sum = initialMoney2022 + moneyReceivedSince;
+  while(sum > annualCost){
+    availableFunds.push(annualCost);
+    sum -= annualCost;
+  }
+  availableFunds.push(sum);
 
-  return { totalCost, donationReceived };
+  return { annualCost, availableFunds };
 }
 
 export default DonationProgressBar;
