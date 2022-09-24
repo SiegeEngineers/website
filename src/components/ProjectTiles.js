@@ -41,15 +41,37 @@ const ProjectTiles = props => {
                   <p className="subtitle">Join the fun, chat with fellow technical Age of Empires II enthusiasts!</p>
                   <p>
                     <a
-                      href="https://discordapp.com/invite/njAsNuD"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="button is-light is-outlined"
+                        href="https://discordapp.com/invite/njAsNuD"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="button is-light is-outlined"
                     >
                       <span className="icon is-large">
-                        <IoLogoDiscord size="100%" />
+                        <IoLogoDiscord size="100%"/>
                       </span>
                       <span>Siege Engineers</span>
+                    </a>
+                  </p>
+                </article>
+                <article className="tile is-child notification is-warning">
+                  <h3 className="title">Mod Directory</h3>
+                  <p className="subtitle">
+                    Sharing is caring
+                  </p>
+                  <p>
+                    A list of all published mods for AoE2 DE, with search, filters, and direct
+                    file download.<br/>
+                    It even generates preview cards if you share the url to a mod
+                    via Discord or social media!
+                  </p>
+                  <p>
+                    <a
+                        href="https://mods.aoe2.se/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="button is-dark is-outlined"
+                    >
+                      mods.aoe2.se
                     </a>
                   </p>
                 </article>
@@ -60,43 +82,65 @@ const ProjectTiles = props => {
                   <p className="subtitle">Captains Mode for Age of Empires II</p>
                   <p>
                     <a href="https://aoe2cm.net/" target="_blank" rel="noreferrer">
-                      <img src={useSiteImages('projects/aoe2cm2.png')} alt="Captains Mode" width={200} />
+                      <img src={useSiteImages('projects/aoe2cm2.png')} alt="Captains Mode" width={200}/>
                     </a>
                   </p>
                   <p>
                     <a
-                      href="https://aoe2cm.net/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="button is-dark is-outlined"
+                        href="https://aoe2cm.net/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="button is-dark is-outlined"
                     >
                       aoe2cm.net
                     </a>
                   </p>
                 </article>
-                <article className="tile is-child notification is-success">
-                  <div className="content has-text-dark">
-                    <h3 className="title">aocrecs.com</h3>
-                    <p className="subtitle">Looking for recorded games? We got you.</p>
+                <article className="tile is-child notification is-dark">
+                  <div className="content">
+                    <h3 className="title">Spectator Dashboard</h3>
+                    <p className="subtitle">Looking for live games? We got you.</p>
                     <p>
                       <a
-                        href="https://aocrecs.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="button is-dark is-outlined"
+                          href="https://aoe2recs.com/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="button is-outlined"
                       >
-                        aocrecs.com
+                        aoe2recs.com
                       </a>
                     </p>
                   </div>
                 </article>
+                <article className="tile is-child notification is-danger">
+                  <h3 className="title">auto-mods</h3>
+                  <p className="subtitle">Adapting data mods for new patches made easy</p>
+                  <p>
+                    The upside: You no longer need to fiddle with Advanced Genie Editor 3 to
+                    painstakingly recreate your data mod when a new patch drops.<br/>
+                    The downside: You have to write C++ code 🙃
+                  </p>
+                  <p>
+                    <a
+                        href="https://github.com/SiegeEngineers/auto-mods"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="button is-light is-outlined"
+                    >
+                    <span className="icon is-large">
+                      <IoLogoGithub size="100%"/>
+                    </span>
+                      <span>SiegeEngineers/auto-mods</span>
+                    </a>
+                  </p>
+                </article>
               </div>
             </div>
             <div className="tile is-parent is-vertical">
-              <article className="tile is-child notification is-dark">
+              <article className="tile is-child notification has-text-dark is-success">
                 <h3 className="title">
                   <a href="https://aoe2map.net/" target="_blank" rel="noreferrer">
-                    <img src={useSiteImages('projects/aoe2map-banner.svg')} alt="Age of Empires II Map" />
+                    <img src={useSiteImages('projects/aoe2map-banner.svg')} alt="Age of Empires II Map"/>
                   </a>
                 </h3>
                 <p className="subtitle">Find tournament maps or showcase your own creations!</p>
@@ -111,10 +155,10 @@ const ProjectTiles = props => {
                 </p>
                 <p>
                   <a
-                    href="https://aoe2map.net/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button is-light is-outlined"
+                      href="https://aoe2map.net/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button is-dark is-outlined"
                   >
                     aoe2map.net
                   </a>
@@ -190,15 +234,36 @@ const ProjectTiles = props => {
                 <p className="subtitle">A mini DLL mod loader for Age of Empires II: The Conquerors.</p>
                 <p>
                   <a
-                    href="https://github.com/SiegeEngineers/aoc-mmmod"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button is-light is-outlined"
+                      href="https://github.com/SiegeEngineers/aoc-mmmod"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button is-light is-outlined"
                   >
                     <span className="icon is-large">
-                      <IoLogoGithub size="100%" />
+                      <IoLogoGithub size="100%"/>
                     </span>
                     <span>SiegeEngineers/aoc-mmmod</span>
+                  </a>
+                </p>
+              </div>
+            </article>
+            <article className="tile is-child notification">
+              <div className="content has-text-dark">
+                <h3 className="title">Image to RMS</h3>
+                <p className="subtitle">Turn images into random map scripts</p>
+                <p>
+                  A small website that takes an image as an input and generates an RMS
+                  snippet or standalone map that looks similar. You can even choose
+                  terrains to match your image colours!
+                </p>
+                <p>
+                  <a
+                      href="https://image-to-rms.aoe2.se/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button is-dark is-outlined"
+                  >
+                    image-to-rms.aoe2.se
                   </a>
                 </p>
               </div>
@@ -213,10 +278,10 @@ const ProjectTiles = props => {
                 </p>
                 <p>
                   <a
-                    href="https://snippets.aoe2map.net/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="button is-dark is-outlined"
+                      href="https://snippets.aoe2map.net/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button is-dark is-outlined"
                   >
                     snippets.aoe2map.net
                   </a>
