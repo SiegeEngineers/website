@@ -32,8 +32,9 @@ const MembershipOptions = props => {
     }
   };
 
-  const { NODE_ENV } = process.env;
-  const products = NODE_ENV === 'production' ? liveProducts : testProducts;
+  // const { NODE_ENV } = process.env;
+  // const products = NODE_ENV === 'production' ? liveProducts : liveProducts;
+  const products = liveProducts;
 
   return (
     <div className="tile is-ancestor">

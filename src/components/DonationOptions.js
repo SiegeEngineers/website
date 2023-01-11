@@ -80,8 +80,9 @@ const DonationOptions = props => {
     }
   ];
 
-  const { NODE_ENV } = process.env;
-  const paymentButtons = (NODE_ENV === 'production' ? liveProducts : testProducts).map(product => (
+  // const { NODE_ENV } = process.env;
+  // const paymentButtons = (NODE_ENV === 'production' ? liveProducts : liveProducts).map(product => (
+  const paymentButtons = liveProducts.map(product => (
     <StripePaymentLink
       label={`Donate € ${product.amount}`}
       priceId={product.priceId}
@@ -95,9 +96,9 @@ const DonationOptions = props => {
   ));
 
   const { annualCost, availableFunds } = getDonationStats();
-  const percent2022 = Math.round((availableFunds[0] / annualCost) * 100);
-  const percent2023 = Math.round((availableFunds[1] / annualCost) * 100);
-  const percent2024 = Math.round((availableFunds[2] / annualCost) * 100);
+  const percent2023 = Math.round((availableFunds[0] / annualCost) * 100);
+  const percent2024 = Math.round((availableFunds[1] / annualCost) * 100);
+  const percent2025 = Math.round((availableFunds[2] / annualCost) * 100);
 
   return (
     <div className="tile is-ancestor">
@@ -112,16 +113,10 @@ const DonationOptions = props => {
             <h4>Donation Goal & Progress</h4>
             <p>
               If the cost estimations on our <Link to={'/projects'}>projects page</Link> are accurate and no projects
-              are added or removed, we would need about <strong>€&nbsp;{(annualCost - availableFunds[2]).toFixed(2)}</strong> more to
+              are added or removed, we would need about <strong>€&nbsp;{(annualCost - availableFunds[1]).toFixed(2)}</strong> more to
               cover our costs for 2024.
             </p>
             <div className="columns is-mobile">
-              <div className="column is-one-third has-text-centered">
-                <figure className="image is-96x96 m-auto">
-                  <CircleProgressBar percent={percent2022} />
-                </figure>
-                <p className="subtitle mt-2">2022</p>
-              </div>
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
                   <CircleProgressBar percent={percent2023} />
@@ -134,11 +129,17 @@ const DonationOptions = props => {
                 </figure>
                 <p className="subtitle mt-2">2024</p>
               </div>
+              <div className="column is-one-third has-text-centered">
+                <figure className="image is-96x96 m-auto">
+                  <CircleProgressBar percent={percent2025} />
+                </figure>
+                <p className="subtitle mt-2">2025</p>
+              </div>
             </div>
             <p className="has-text-grey has-text-right">
               <small>
                 <small>
-                  Last updated on <time datetime="2022-09-25">Sep 25, 2022</time>
+                  Last updated on <time datetime="2023-01-11">Jan 11, 2023</time>
                 </small>
               </small>
             </p>
