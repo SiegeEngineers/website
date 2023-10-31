@@ -113,8 +113,8 @@ const DonationOptions = props => {
             <h4>Donation Goal & Progress</h4>
             <p>
               If the cost estimations on our <Link to={'/projects'}>projects page</Link> are accurate and no projects
-              are added or removed, we would need about <strong>€&nbsp;{(annualCost - availableFunds[1]).toFixed(2)}</strong> more to
-              cover our costs for 2024.
+              are added or removed, we would need about <strong>€&nbsp;{(annualCost - availableFunds[2]).toFixed(2)}</strong> more to
+              cover our costs for 2025.
             </p>
             <div className="columns is-mobile">
               <div className="column is-one-third has-text-centered">
@@ -139,7 +139,7 @@ const DonationOptions = props => {
             <p className="has-text-grey has-text-right">
               <small>
                 <small>
-                  Last updated on <time datetime="2023-05-20">May 20, 2023</time>
+                  Last updated on <time datetime="2023-05-20">Oct 31, 2023</time>
                 </small>
               </small>
             </p>
