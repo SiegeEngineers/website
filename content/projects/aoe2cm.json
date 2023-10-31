@@ -30,10 +30,10 @@
   ],
   "costs": {
     "currency": "€",
-    "total": 79.87,
+    "total": 81.65,
     "lineitems": [
       {
-        "amount": 19.87,
+        "amount": 21.65,
         "description": "Domain"
       },
       {

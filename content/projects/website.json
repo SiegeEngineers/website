@@ -29,14 +29,14 @@
   ],
   "costs": {
     "currency": "€",
-    "total": 102.96,
+    "total": 108.91,
     "lineitems": [
       {
         "amount": 19.16,
         "description": "siegeengieers.org"
       },
       {
-        "amount": 23.80,
+        "amount": 29.75,
         "description": "aoe2.se"
       },
       {
