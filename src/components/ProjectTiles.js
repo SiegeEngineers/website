@@ -118,7 +118,8 @@ const ProjectTiles = props => {
                   <p>
                     The upside: You no longer need to fiddle with Advanced Genie Editor 3 to
                     painstakingly recreate your data mod when a new patch drops.<br/>
-                    The downside: You have to write C++ code 🙃
+                    <del>The downside: You have to write C++ code 🙃</del>
+                    <i>You can write Python code now. No more downside!</i>
                   </p>
                   <p>
                     <a
