@@ -96,9 +96,9 @@ const DonationOptions = props => {
   ));
 
   const { annualCost, availableFunds } = getDonationStats();
-  const percent2024 = Math.round((availableFunds[0] / annualCost) * 100);
-  const percent2025 = Math.round((availableFunds[1] / annualCost) * 100);
-  const percent2026 = Math.round((availableFunds[2] / annualCost) * 100);
+  const percent2025 = Math.round((availableFunds[0] / annualCost) * 100);
+  const percent2026 = Math.round((availableFunds[1] / annualCost) * 100);
+  const percent2027 = Math.round((availableFunds[2] / annualCost) * 100);
 
   return (
     <div className="tile is-ancestor">
@@ -114,15 +114,9 @@ const DonationOptions = props => {
             <p>
               If the cost estimations on our <Link to={'/projects'}>projects page</Link> are accurate and no projects
               are added or removed, we would need about <strong>€&nbsp;{(annualCost - availableFunds[1]).toFixed(2)}</strong> more to
-              cover our costs for 2025.
+              cover our costs for 2026.
             </p>
             <div className="columns is-mobile">
-              <div className="column is-one-third has-text-centered">
-                <figure className="image is-96x96 m-auto">
-                  <CircleProgressBar percent={percent2024} />
-                </figure>
-                <p className="subtitle mt-2">2024</p>
-              </div>
               <div className="column is-one-third has-text-centered">
                 <figure className="image is-96x96 m-auto">
                   <CircleProgressBar percent={percent2025} />
@@ -135,11 +129,17 @@ const DonationOptions = props => {
                 </figure>
                 <p className="subtitle mt-2">2026</p>
               </div>
+              <div className="column is-one-third has-text-centered">
+                <figure className="image is-96x96 m-auto">
+                  <CircleProgressBar percent={percent2027} />
+                </figure>
+                <p className="subtitle mt-2">2027</p>
+              </div>
             </div>
             <p className="has-text-grey has-text-right">
               <small>
                 <small>
-                  Last updated on <time datetime="2024-12-01">Dec 1, 2024</time>
+                  Last updated on <time datetime="2025-02-14">Feb 14, 2025</time>
                 </small>
               </small>
             </p>
